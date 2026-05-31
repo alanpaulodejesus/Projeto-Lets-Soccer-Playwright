@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Complete Signup Flow - Login to Register', () => {
+test.describe('Signup Flow Form', () => {
   
   test('Should complete full signup flow: Login page → Signup → Register → Verify', async ({ page }) => {
     // Step 1: Navigate to login page
@@ -98,38 +98,7 @@ test.describe('Complete Signup Flow - Login to Register', () => {
     const currentUrl = page.url();
     expect(currentUrl).toContain('/pages/cadastro');
     console.log(`✓ Successfully redirected from signup page to: ${currentUrl}`);
-    /*
-    // Step 10: Attempt to login with new credentials (if dashboard allows)
-    console.log('\nStep 10: Attempting to login with new credentials...');
     
-    // Check if we're on a login page or dashboard
-    const pageContent = await page.textContent('body');
-    
-    if (pageContent && pageContent.includes('Email')) {
-      // We're likely on login page, try to login
-      console.log('  → Attempting login with newly created account');
-      
-      const loginEmailField = page.locator('input[type="email"]');
-      const loginPasswordField = page.locator('input[type="password"]');
-      const loginButton = page.locator('button:has-text("ENTRAR")');
-      
-      if (await loginButton.count() > 0) {
-        await loginEmailField.fill(testEmail);
-        await loginPasswordField.fill(testPassword);
-        await loginButton.click();
-        
-        await page.waitForLoadState('networkidle');
-        const loginUrl = page.url();
-        
-        // Verify we're no longer on login page
-        expect(loginUrl).not.toContain('localhost:8080/');
-        console.log(`✓ Successfully logged in with new account to: ${loginUrl}`);
-      }
-    } else {
-      console.log('  → Dashboard or success page displayed (login not required)');
-      console.log(`✓ User is authenticated on: ${currentUrl}`);
-    }
-    */
     console.log('\n✅ Complete signup flow test finished successfully!');
       
   });
