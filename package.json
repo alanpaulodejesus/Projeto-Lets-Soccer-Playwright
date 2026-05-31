@@ -1,0 +1,22 @@
+{
+  "name": "projeto-lets-soccer-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanpaulodejesus/Projeto-Lets-Soccer-Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanpaulodejesus/Projeto-Lets-Soccer-Playwright/issues"
+  },
+  "homepage": "https://github.com/alanpaulodejesus/Projeto-Lets-Soccer-Playwright#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
